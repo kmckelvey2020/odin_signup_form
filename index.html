@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='X-UA-Compatible' content='ie-edge'>
+        <title>Sign Up Form</title>
+        <link rel='stylesheet' href='styles.css'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Blaka&family=Caesar+Dressing&family=Germania+One&family=MedievalSharp&family=Mingzat&family=Roboto&family=UnifrakturCook&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            
+        </header>
+        <main>
+            <div class="hero">
+                <div></div>
+                <div class="transparent_bg">
+                    <img src="./public/odin-lined.png" alt="Thor Odinson profile pic" />
+                    <h1>ODIN</h1>
+                </div>
+                <div></div>
+                <div class="credit"><p class="tiny_text">Photo by Halie West on Unsplash</p></div>
+            </div>
+            <div class="signup">
+                <p><strong>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br/>Sign up <em>now</em> to get started.</strong></p>
+                <br/>
+                <p><strong>You <em>know</em> you want to.</strong></p>
+                <br/>
+                <form action="#blank" method="post">
+                    <section class="inputs">
+                        <p><strong>Let's do this!</strong></p>    
+                        <fieldset class="full_name">
+                            <div class="field">
+                                <label for="f_name">FIRST NAME</label>
+                                <input class="text" type="text" id="f_name" name="f_name" placeholder="Thor" pattern="^[A-Za-z\\w]{3,20}$" 
+                                title="*Enter between 3 and 20 characters for name." required />
+                            </div>
+                            <div class="field">
+                                <label for="l_name">LAST NAME</label>
+                                <input class="text" type="text" id="l_name" name="l_name" placeholder="Odinson" 
+                                pattern="^[A-Za-z\\w]{3,20}$" title="*Enter between 3 and 20 characters for name." required />
+                            </div>
+                        </fieldset>
+                        <fieldset class="contact">
+                            <div class="field">
+                                <label for="email">EMAIL</label>
+                                <input class="email" type="email" id="email" name="email" title="*Enter a valid email." required />
+                            </div>
+                            <div class="field">
+                                <label for="phone">PHONE NUMBER</label>
+                                <input class="phone" type="text" id="phone" name="phone" pattern="^\([0-9]{3}\)[0-9]{3}-[0-9]{4}$" title="*Enter a valid phone number. (###)###-####" required />
+                            </div>
+                        </fieldset>
+                        <fieldset class="password">
+                            <div class="field">
+                                <label for="password">PASSWORD</label>
+                                <input class="password" type="password" id="password" name="password" pattern="^.{8,20}$" title="*Enter a password between 8 and 20 characters." required />
+                            </div>
+                            <div class="field">
+                                <label for="confirm_password">CONFIRM PASSWORD</label>
+                                <input class="confirm_password" type="password" id="confirm_password" name="confirm_password" pattern="^.{8,20}$" title="*Passwords must match." required />
+                            </div>
+                        </fieldset>
+                    </section>    
+                    <button type="submit">Create Account</button>
+                    <p class="login">Already have an account? <a href="">Log in</a></p>
+                </form>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
