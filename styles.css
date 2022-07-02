@@ -14,19 +14,19 @@ body {
     margin: 0 auto;
 }
 
-header, footer {
+header {
     height: min(5vh, 2rem);
 }
 
 main {
-    background-color: white;
+    background-color: black;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
     margin: 0rem min(10vw, 15%);
-    height: min(100vh, 80rem);
+    min-height: min(95vh, 80rem);
     padding: 0rem 0rem;
+    margin-bottom: 1rem;
 }
 
 main p {
@@ -39,11 +39,12 @@ main p {
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: black;
     flex: 1.5;
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
-    height: min(100vh, 80rem);
+    height: min(95vh, 80rem);
     min-width: min(60vw, 16rem);
 }
 
@@ -169,4 +170,26 @@ a {
     text-decoration: none;
 }
 
+footer {
+    color: white;
+    font-family: 'Caesar Dressing', 'UnifrakturCook', 'MedievalSharp', 'Germania One', cursive;
+    font-size: min(7vw, 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: repeating-conic-gradient(from 45deg, rgba(150, 155, 160, 0.75) 0deg 30deg, rgba(180, 185, 190, 0.75) 30deg 60deg, rgba(210, 215, 220, 0.75) 60deg 90deg, rgb(90, 110, 70) 90deg 120deg, rgb(60, 80, 40) 120deg 150deg, rgb(30, 50, 10) 150deg 180deg);
+    background-size: 3rem 3rem;
+    border: 0.25rem solid rgba(0, 0, 0, 1);
+    height: min(15vh, 7rem);
+    margin: 0rem auto;
+    text-align: center;
+    text-shadow: -0.25rem 0.25rem 0.5rem black,
+                -0.15rem 0.15rem 0rem black;
+    width: 100%;
+}
 
+@media only screen and (max-width: 640px) {
+    .hero {
+        height: min(55vh, 40rem);
+    }
+} 

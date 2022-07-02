@@ -6,6 +6,7 @@
         <meta http-equiv='X-UA-Compatible' content='ie-edge'>
         <title>Sign Up Form</title>
         <link rel='stylesheet' href='styles.css'>
+        <link rel="icon" href="./public/odin_favicon.PNG" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,32 +38,33 @@
                             <div class="field">
                                 <label for="f_name">FIRST NAME</label>
                                 <input class="text" type="text" id="f_name" name="f_name" placeholder="Thor" pattern="^[A-Za-z\\w]{3,20}$" 
-                                title="*Enter between 3 and 20 characters for name." required />
+                                title="*Enter between 3 and 20 characters for name." autoComplete="given-name" required />
                             </div>
                             <div class="field">
                                 <label for="l_name">LAST NAME</label>
                                 <input class="text" type="text" id="l_name" name="l_name" placeholder="Odinson" 
-                                pattern="^[A-Za-z\\w]{3,20}$" title="*Enter between 3 and 20 characters for name." required />
+                                pattern="^[A-Za-z\\w]{3,20}$" title="*Enter between 3 and 20 characters for name." autoComplete="family-name" required />
                             </div>
                         </fieldset>
                         <fieldset class="contact">
                             <div class="field">
                                 <label for="email">EMAIL</label>
-                                <input class="email" type="email" id="email" name="email" title="*Enter a valid email." required />
+                                <input class="email" type="email" id="email" name="email" title="*Enter a valid email." autoComplete="email" required />
                             </div>
                             <div class="field">
                                 <label for="phone">PHONE NUMBER</label>
-                                <input class="phone" type="text" id="phone" name="phone" pattern="^\([0-9]{3}\)[0-9]{3}-[0-9]{4}$" title="*Enter a valid phone number. (###)###-####" required />
+                                <input class="phone" type="text" id="phone" name="phone" pattern="^\([0-9]{3}\)[0-9]{3}-[0-9]{4}$" title="*Enter a valid phone number. (###)###-####" autoComplete="tel-national" required />
                             </div>
                         </fieldset>
                         <fieldset class="password">
                             <div class="field">
                                 <label for="password">PASSWORD</label>
-                                <input class="password" type="password" id="password" name="password" pattern="^.{8,20}$" title="*Enter a password between 8 and 20 characters." required />
+                                <input class="password" type="password" id="password" name="password" pattern="^.{8,20}$" title="*Enter a password between 8 and 20 characters." autoComplete="new-password" required />
                             </div>
-                            <div class="field">
+                            <div class="field confirm">
                                 <label for="confirm_password">CONFIRM PASSWORD</label>
-                                <input class="confirm_password" type="password" id="confirm_password" name="confirm_password" pattern="^.{8,20}$" title="*Passwords must match." required />
+                                <input class="confirm_password" type="password" id="confirm_password" name="confirm_password" pattern="^.{8,20}$" title="*Passwords must match." autoComplete="new-password" required />
+                                <div class="error"></div>
                             </div>
                         </fieldset>
                     </section>    
@@ -72,7 +74,8 @@
             </div>
         </main>
         <footer>
-
+            <p>(c) Kristan McKelvey 2022</p>
         </footer>
     </body>
+    <script src="./script.js"></script>
 </html>
